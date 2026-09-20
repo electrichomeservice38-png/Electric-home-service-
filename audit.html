@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>Owner Audit Log</h2><table><tr><th>Date</th><th>Actor</th><th>Action</th><th>Entity</th><th>Old</th><th>New</th></tr>{% for l in logs %}<tr><td>{{l.created_at}}</td><td>{{l.actor}}</td><td>{{l.action}}</td><td>{{l.entity}} #{{l.entity_id}}</td><td>{{l.old_value}}</td><td>{{l.new_value}}</td></tr>{% endfor %}</table>{% endblock %}

@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>Rate & Distance List</h2><table><tr><th>From</th><th>To</th><th>Charge</th></tr>{% for lo,hi,fee in distance_rates %}<tr><td>{{lo}}</td><td>{{hi}} km</td><td>₹{{fee}}</td></tr>{% endfor %}<tr><td>50</td><td>+</td><td>₹400 + ₹10 per extra km</td></tr></table>{% endblock %}
